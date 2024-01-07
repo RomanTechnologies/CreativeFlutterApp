@@ -1,12 +1,18 @@
 import 'package:flutter/flutter.dart';
 import '../models/itinerary_model.dart';
 
-import '../services/firebase_service.dart';
+import '../services/itinerary_service.dart';
+
+import '../utils/change_notifier.dart';
 
 class ItineraryViewModel extends ChangeNotifier {
+  final ItineraryService itineraryService;
   list<ItineraryModel> itineraries = [];
 
-  void addItinerary(ItineraryModel itinerary) {};
+  ItineraryViewModel(this.itineraryService);
 
-  void removeItinerary(String title) {};
+  Future void loadItineraries() async {
+    itineraries = await itineraryService.getItineraries();
+    notifyListeners();
+  }
 }
