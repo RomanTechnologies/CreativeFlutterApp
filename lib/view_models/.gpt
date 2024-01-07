@@ -1,0 +1,5 @@
+lib/view_models // Subdirectory containing view models for managing the state.
+> Overview: This directory hosts the view models used for managing the application's state and the interaction between the UI (User Interface) and the business logic. They provide an abstract layer between the UI (views) and the models (data), enabling a more maintainable and readable code base.
+- itinerary_view_model.dart: Handles the management of itineraries, coordinating data between the UI and services.
+- phrasebook_view_model.dart: Manages the phrasebook features and interactions within the app.
+- travel_tips_view_model.dart: Coordinates and manages data related to travel tips and their display in the UI.
