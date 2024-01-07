@@ -1,4 +1,5 @@
 import 'package:flutter/flutter.dart';
+import 'package:flutter_material/flutter_material.dart';
 import '../view_models/phrasebook_view_model.dart';
 import '../widgets/phrasebook_item.dart';
 
