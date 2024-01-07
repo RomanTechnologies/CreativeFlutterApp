@@ -5,15 +5,20 @@ class MapMarker extends StatelessWidget {
   final LatLng position;
   final String title;
   final String snippet;
+  final Function() onTap;
 
-  MapMarker({this.position, this.title, this.snippet});
+  MapMarker({ Key?key, this.position, this.title, this.snippet, this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Marker(
-      markerId: MarkerId(title),
-      position: position,
-      infoWindow: InfoWindow(title: title, snippet: snippet),
+    return GestureDetector(
+      onTap: onTap,
+      child: Marker(
+        markerId: MarkerID(title),
+        position: position,
+        infoWindow: InfoWindow(title: title, snippet: snippet),
+        // Add additional design and styling here.
+      ),
     );
   }
 }
