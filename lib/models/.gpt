@@ -1,0 +1,3 @@
+lib/models // Subdirectory containing data models for the application.
+>0Overview: This directory hosts the data models used throughout the application. These models are used to manage and transfer data within the application and to external services. They provide a consistent structure for data handling and representation.
+- itinerary_model.dart: Contains the itinerary model with fields for title start and end dates, and activities. This model is used to represent itineraries within the application.
