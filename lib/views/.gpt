@@ -1,0 +1,9 @@
+lib/views // Subdirectory containing UI views/screens of the application.
+>0Overview: This directory hosts the UI views or screens used in the application. Each file represents a screen with a specific function or theme, providing the application with multiple features and interactions. These screens enable users to interact with the application's functionalities and content.
+- culture_cuisine_view.dart: Screen for exploring cultural cuisine and dishes.
+- home_view.dart: The main home screen of the application, providing access to various features.
+- interactive_map_view.dart: Showcases the interactive map features and functions.
+- itinerary_planner_view.dart: Displays the screen for creating and managing itineraries.
+- phrasebook_view.dart: Offers a screen for accessing and managing phrasebook features.
+- travel_tips_view.dart: Provides an overview of travel tips and recommendations.
+- virtual_tour_view.dart: Enables a virtual tour feature within the app.
