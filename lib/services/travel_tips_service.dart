@@ -1,11 +1,14 @@
 import 'package:flutter/flutter.dart';
-import '../models/itinerary_model.dart';
-
+import '../models/travel_tip_model.dart';
 import '../services/firebase_service.dart';
 
+import 'package:firebase_database/firebase_database.dart';
+
 class TravelTipsService {
-  // Methods to manage travel tips in the app.
-  void getTravelTips() {
-    // Implement logic to retrieve travel tips.
+  final FirebaseDatabaseInstance database = FirebaseDatabaseInstance.instance;
+
+  Future<List<TravelTipModel>> getTravelTips() async {
+    var response = await database.ref('travel_tips').get();
+    return response.values.map(TravelTipModel.fromJson).toList();
   }
 }
