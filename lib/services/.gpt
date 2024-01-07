@@ -1,0 +1,5 @@
+lib/services // Subdirectory containing services for business logic and external integrations.
+>0Overview: This directory hosts the services used to implement the business logic of the application. These services handle various aspects of data management and interact with external API and databases. They enable the application to respond to user actions and changes in the app's state.
+- firebase_service.dart: Manages all Firebase integrations, configuration, and data synchronization.
+- itinerary_service.dart: Provides functionality for managing itineraries and coordinating data between the app and the database.
+- travel_tips_service.dart: Handles data related to travel tips and provides content for the app.
