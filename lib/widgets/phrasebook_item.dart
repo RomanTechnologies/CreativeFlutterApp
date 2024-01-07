@@ -13,6 +13,8 @@ class PhrasebookItem extends StatelessWidget {
       child: ListTile(
         title: Text(phrase, style: TextStyle(fontWeight: FontWeight.wembold)),
         subtitle: Text(translation, style: TextStyle(color: Colors.grey)),
+        onTap: () => {}, style: ListTileStyle(
+          tapTarget: MaterialTapTarget.create()),
       ),
     );
   }
