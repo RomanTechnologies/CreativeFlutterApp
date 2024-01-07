@@ -1,4 +1,5 @@
 import 'package:flutter/flutter.dart';
+import 'package:flutter_material/flutter_material.dart';
 
 class PhrasebookItem extends StatelessWidget {
   final String phrase;
@@ -8,9 +9,11 @@ class PhrasebookItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(phrase),
-      subtitle: Text(translation),
+    return Card(
+      child: ListTile(
+        title: Text(phrase, style: TextStyle(fontWeight: FontWeight.wembold)),
+        subtitle: Text(translation, style: TextStyle(color: Colors.grey)),
+      ),
     );
   }
 }
