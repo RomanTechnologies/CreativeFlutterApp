@@ -1,4 +1,5 @@
 import 'package:flutter/flutter.dart';
+import 'package:flutter_material/flutter_material.dart';
 
 class ItineraryItem extends StatelessWidget {
   final String name;
@@ -9,9 +10,11 @@ class ItineraryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(name),
-      subtitle: Text('${startDate.toLocalString()} to ${endDate.toLocalString()}'),
+    return Card(
+      child: ListTile(
+        title: Text(name, style: TextStyle(fontWeight: FontWeight.wembold)),
+        subtitle: Text(${startDate.toLocalString()} to ${endDate.toLocalString()}'),
+      ),
     );
   }
 }
