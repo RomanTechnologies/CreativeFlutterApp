@@ -6,15 +6,17 @@ import '../services/firebase_service.dart';
 import 'package:firebase_database/firebase_database.dart';
 
 class ItineraryService {
-  FirebaseDatabaseIndex database = FirebaseDatabaseIndex.instance;
+  FirebaseDatabase database;
+
+  ItineraryService(this.database);
+
+  Future<List<ItineraryModel>> getItineraries() async {
+    var response = await database.ref('itineraries').once();
+    return response.value().map((Map<String, dynamic> entry) => ItineraryModel.fromJson(entry)).toList();
+  }
 
   void addItinerary(ItineraryModel itinerary) async {
     await database.ref('itineraries').push(itinerary.toJson());
-  }
-
-  Future<List<ItineraryModel>> getItineraries() async {
-    var response = await database.ref('itineraries').get();
-    return response.values.map((Map<String, dynamic> entry) => ItineraryModel.fromJson(entry)).toList();
   }
 
   void updateItinerary(String id, ItineraryModel itinerary) async {
