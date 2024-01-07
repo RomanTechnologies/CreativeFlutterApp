@@ -15,4 +15,10 @@ class ItineraryViewModel extends ChangeNotifier {
     itineraries = await itineraryService.getItineraries();
     notifyListeners();
   }
+
+  Future void addItinerary(ItineraryModel itinerary) async {
+    await itineraryService.addItinerary(itinerary);
+    itineraries.add(itinerary);
+    notifyListeners();
+  }
 }
