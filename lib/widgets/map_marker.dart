@@ -1,5 +1,6 @@
 import 'package:flutter/flutter.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:flutter_material/flutter_material.dart';
 
 class MapMarker extends StatelessWidget {
   final LatLng position;
@@ -13,7 +14,7 @@ class MapMarker extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Marker(
+      child: CustomMarker(
         markerId: MarkerID(title),
         position: position,
         infoWindow: InfoWindow(title: title, snippet: snippet),
