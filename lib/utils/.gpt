@@ -1,0 +1,7 @@
+lib/utils // Subdirectory containing utility functions and helpers.
+>0Overview: This directory includes various utility functions and helpers used throughout the application. These functions provide common capabilities for all areas of the app, such as accessibility, localization, and map controls. They enable consistent and efficient code usage.
+- accessibility.dart: Handles accessibility features and interactions.
+- itinerary_helpers.dart: Functions related to managing itineraries and data processing.
+- localization.dart: Provides utilities for localization and internationalization.
+- map_interactions.dart: Manages map-related interactions and functionality.
+- phrasebook_helpers.dart: Helpers for managing phrasebook related features.
