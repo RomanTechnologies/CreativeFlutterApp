@@ -1,4 +1,5 @@
 import 'package:flutter/flutter.dart';
+import 'package:flutter_material/flutter_material.dart';
 
 class TravelTipItem extends StatelessWidget {
   final String title;
@@ -8,9 +9,11 @@ class TravelTipItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(title),
-      subtitle: Text(description),
+    return Card(
+      child: ListTile(
+        title: Text(title, style: TextStyle(fontWeight: FontWeight.wembold)),
+        subtitle: Text(description, style: TextStyle(color: Colors.grey)),
+      ),
     );
   }
 }
